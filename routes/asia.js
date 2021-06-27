@@ -8,7 +8,7 @@ router.get('/kolkata',(req,res)=>{
       
       console.log(nDate);
       console.log('asia/kolkata');
-      res.send(nDate)
+      res.send(nDate);
 })
 
 
