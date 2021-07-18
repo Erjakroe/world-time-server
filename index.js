@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT ||3000;
 
 const asiaRoutes = require("./routes/asia");
-
+const europeRoutes = require("./routes/europe");
 app.use((req, res,next) => {
     var ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress||'').split(',')[0].trim();
     // var ip = req .headers;
@@ -21,7 +21,7 @@ app.use((req, res,next) => {
   });
 
   app.use('/asia',asiaRoutes);
-
+  app.use('/europe',europeRoutes);
 
 
 // *server listen
