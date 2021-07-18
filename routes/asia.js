@@ -1,16 +1,9 @@
 const express = require("express");
+const india = require("../services/asia/india");
 const router = express.Router();
 
-router.get('/kolkata',(req,res)=>{
-    const nDate = new Date().toLocaleString('en-US', {
-        timeZone: 'Asia/Kolkata'
-      });
-      
-      console.log(nDate);
-      console.log('asia/kolkata');
-      res.send(nDate);
-})
-
+router.get('/kolkata',india.getKolkataData);
+router.post('/kolkata',india.getKolkataData);
 
 
 module.exports = router;
